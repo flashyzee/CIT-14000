@@ -1,0 +1,34 @@
+# Defining program functions - think of it like the brain work 
+def calculate_mercury_weight(weight):
+    return weight * 0.38
+
+def calculate_venus_weight(weight):
+    return weight * 0.91
+
+def calculate_moon_weight(weight):
+    return weight * 0.165
+
+def calculate_mars_weight(weight):
+    return weight * 0.38
+
+# Creating a main function 
+def main():
+    # Ask the user to enter their weight
+    user_weight = float(input("Enter your weight in pounds: "))
+
+    # Calculate weights
+    mercury_weight = calculate_mercury_weight(user_weight)
+    venus_weight = calculate_venus_weight(user_weight)
+    moon_weight = calculate_moon_weight(user_weight)
+    mars_weight = calculate_mars_weight(user_weight)
+
+    # Display the results 
+    print(f"You entered {user_weight} lbs as your weight.")
+    print(f"You would weigh {mercury_weight} lbs on Mercury.")
+    print(f"You would weigh {venus_weight} lbs on Venus.")
+    print(f"You would weigh {moon_weight} lbs on the Moon.")
+    print(f"You would weigh {mars_weight} lbs on Mars.")
+
+# Add the `if` statement that launches the main() function here
+if __name__ == "__main__":
+    main()
