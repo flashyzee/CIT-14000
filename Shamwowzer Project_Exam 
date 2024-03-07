@@ -1,0 +1,31 @@
+def order_capture():
+    while True:
+        try:
+            quantity = int(input("Enter the number of Shamwowzers sold: "))
+            if quantity < 0:
+                print("Error: Please enter a positive integer.")
+            else:
+                return quantity
+        except ValueError:
+            print("Error: Please enter a valid integer.")
+
+def subtotal(num):
+    if num >= 10:
+        return num * 10.00
+    else:
+        return num * 13.00
+
+def shipping_cost(num):
+    return num * 3.00
+
+def main():
+    print("Welcome to Shamwowzer, the worlds most absorbent shammy!")
+
+    num = order_capture()
+    my_subtotal = subtotal(num)
+    my_shipping = shipping_cost(num)  
+    total_amount_due = my_subtotal + my_shipping
+    print(f"You ordered {num}. Your subtotal is ${my_subtotal}, shipping and handling is ${my_shipping}, and total amount due is ${total_amount_due}")
+
+if __name__ == "__main__":
+    main()
