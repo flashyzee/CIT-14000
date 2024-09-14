@@ -1,4 +1,4 @@
-initialBill = int(input("Enter the about of your bill: "))
+initialBill = int(input("Enter your bill amount: "))
 percentTip = int(input("Enter the tip percentage (in whole numbers):"))
 tipCalculation = initialBill * percentTip / 100
 totalBillCalculation = initialBill + tipCalculation
